@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color: #e4e9fd;
+    width: 80%;
+    margin: 1rem auto;
+    font-family: sans-serif;
+}
+
+.nav{
+    width: 100%;
+    border: 2px solid black;
+}
+
+
+.nav-heading{
+    font-size: large;
+    font-weight: bolder;
+    text-align: center;
+    background: #a683e3;
+    color: #e4e9fd;
+}
+
+.date{
+    text-align: center;
+    color:#a683e3 ;
+    margin:0.5rem 0;
+    background:#e4e9fd;
+}
+
+li{
+    list-style-type:none;
+    text-align: center;
+    padding: 0.5rem;
+    margin:0.5rem 0;
+    min-height: 1rem;
+}
+
+input{
+    width:80%;
+    height: 2.2rem;
+    border: none;
+    font-size: larger;
+    border-radius: 16px 0 0 16px;
+}
+
+button{
+    width: 20%;
+    height: 2.2rem;
+    border: none;
+    border-radius: 0 16px 16px 0;
+}
+
+.input{
+    display: flex;
+    border: 2px solid black;
+    border-radius: 16px;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    outline: none;
+}
+
+ul{
+    position: relative;
+}
+
+ul input{
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    left: 10px;
+}
+
+.strike{
+    text-decoration: line-through;
+}
+
+.todo{
+background: rgba(255, 255, 255, 0.4);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.2px);
+-webkit-backdrop-filter: blur(7.2px);
+border: 1px solid rgba(255, 255, 255, 1);
+}
+
+footer{
+    text-align: center;
+    margin: 1rem;
+}
+
+span{
+    color: #a683e3;
+}

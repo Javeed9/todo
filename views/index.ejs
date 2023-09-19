@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-heading">
+            <h1>To-Do</h1>
+        </div>
+    </div>
+
+    <div class="date">
+        <h1><%= date %></h1>
+    </div>
+
+    <div class="todo">
+        <ul>
+            <li> <input type="checkbox"> Adding Ajax 🗺 </li><hr>
+            <li> <input type="checkbox"> Adding Dark Mode 🌃</li><hr>
+            <li> <input type="checkbox"> Adding oauth2.0 🔒 & Connecting Mongo Atlas 🗂</li>
+                <% if(locals.data){ %>
+                    <% data.forEach((task,index)=>{ %>
+                    <hr><li><input type="checkbox"><%= task %></li>
+                    <!-- <%if(index<data.length-1){%>
+                        <hr>
+                    <%}%> -->
+                <% })} %>
+        </ul>
+    </div>
+    <br>
+    <form action="/add" method="post">
+        <div class="input">
+            <input type="text" name="task"><button type="submit">Add</button>
+        </div>
+    </form>
+    <footer>
+        <i>~Made with ❤️ by <span>Javeed Syed</span>~</i>
+    </footer>
+</body>
+<script>
+    var boxes = document.querySelectorAll("ul input")
+    boxes.forEach((box)=>{
+        box.addEventListener('change',()=>{
+            console.log(box.parentElement.classList.toggle('strike'))
+        })
+    })
+</script>
+</html>
